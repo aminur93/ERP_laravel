@@ -1,0 +1,176 @@
+@extends('merch.index')
+@section('content')
+@push('css')
+	<style>
+		hr{margin-top: 7px; margin-bottom: 7px; display: block;border-color: #d6d8db;}
+		.table .thead-info th { color: #000; background-color: #d6d8db; border-color: #b3b7bb;}
+		.capitalize{text-transform: capitalize;}
+
+	</style>
+@endpush
+<div class="main-content">
+	<div class="main-content-inner">
+		<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+			<ul class="breadcrumb">
+				<li> 
+					<i class="ace-icon fa fa-home home-icon"></i>
+					<a href="#">Order BOM</a>
+				</li>  
+				<li class="active">Order BOM Form</li>
+			</ul><!-- /.breadcrumb --> 
+		</div>
+		<div class="page-content">   
+			<!-- Display Erro/Success Message -->
+			@include('inc/message')
+			
+			<div class="widget-body">
+				<div class="row">
+					<div class="col-sm-12">
+						<table class="table" width="50%" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<th>Order No</th>
+								<td>{{ (!empty($order->order_code)?$order->order_code:null) }}</td>
+								<th>Unit</th>
+								<td>{{ (!empty($order->hr_unit_name)?$order->hr_unit_name:null) }}</td>
+								<th>Buyer</th>
+								<td>{{ (!empty($order->b_name)?$order->b_name:null) }}</td>
+							</tr>
+							<tr>
+								<th>Brand</th>
+								<td>{{ (!empty($order->br_name)?$order->br_name:null) }}</td>
+								<th>Season</th>
+								<td>{{ (!empty($order->se_name)?$order->se_name:null) }}</td>
+								<th>Style No</th>
+								<td>{{ (!empty($order->stl_no)?$order->stl_no:null) }}</td>
+							</tr>
+							<tr>
+								<th>Order Quantity</th>
+								<td>{{ (!empty($order->order_qty)?$order->order_qty:null) }}</td>
+								<th>Delivery Date</th>
+								<td>{{ (!empty($order->order_delivery_date)?$order->order_delivery_date:null) }}</td>
+								<th>Reference No</th>
+								<td>{{ (!empty($order->order_ref_no)?$order->order_ref_no:null) }}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="widget-body table-responsive">
+				<table id="bomItemTable" class="table table-bordered table-responsive table-hover text-center capitalize">
+					<thead class="thead-info">
+						<tr>
+							<th>SL.</th>
+							<th>Item</th>
+							<th>Placements</th>
+							<th>Item Description</th>
+							<th>GMT color</th>
+							<th>Items color</th>
+							<th>Measurements</th>
+							<th>Size</th>
+							<th>Type</th>
+							<th>Garment qty</th>
+						</tr>
+					</thead>  
+					<tbody class="preview-data"> 
+						@php $i = 0; @endphp
+						@if(count($orderDetails) > 0)
+							@foreach($orderDetails as $orderDetail)
+							<tr>
+								<td class="vertical-align-center">{{ ++$i }}</td>
+								<td class="vertical-align-center">{{ $orderDetail->item['item_name'] }}</td>
+								<td class="vertical-align-center">{{ $orderDetail->item_placement->placement }}</td>
+								<td class="vertical-align-center">{{ $orderDetail->description }}</td>
+								<td>
+									@php
+										$gmtF = 0;
+									@endphp
+									@foreach($orderDetail->gmt_color as $gmtColor)
+									@if($gmtF == 0)
+										@php $gmtF = 1; @endphp
+										{{ $gmtColor->gmt_color }}
+									@else
+									<hr>
+									{{ $gmtColor->gmt_color }}
+									@endif
+									@endforeach
+								</td>
+								<td>
+									@php $colorF = 0; @endphp
+									@foreach($orderDetail->gmt_color as $gmtColor)
+									@if($colorF == 0)
+									@php $colorF = 1; @endphp
+										{{ $gmtColor->item_color_measurement->color_name }}
+									@else
+									<hr>
+									{{ $gmtColor->item_color_measurement->color_name }}
+									@endif
+									@endforeach
+								</td>
+								<td>
+									@php $measurementF = 0; @endphp
+									@foreach($orderDetail->gmt_color as $gmtColor)
+									@if($measurementF == 0)
+									@php $measurementF = 1; @endphp
+									{{ $gmtColor->item_color_measurement->measurement }}
+									@else
+									<hr>
+									{{ $gmtColor->item_color_measurement->measurement }}
+									@endif
+									@endforeach
+								</td>
+								<td>
+									@php $sizeF = 0; @endphp
+									@foreach($orderDetail->gmt_color as $gmtColor)
+									@if($sizeF == 0)
+									@php $sizeF = 1; @endphp
+									{{ $gmtColor->item_color_measurement->size }}
+									@else
+									<hr>
+									{{ $gmtColor->item_color_measurement->size }}
+									@endif
+									@endforeach
+								</td>
+								<td>
+									@php $typeF = 0; @endphp
+									@foreach($orderDetail->gmt_color as $gmtColor)
+									@if($typeF == 0)
+									@php $typeF = 1; @endphp
+									{{ $gmtColor->item_color_measurement->type }}
+									@else
+									<hr>
+									{{ $gmtColor->item_color_measurement->type }}
+									@endif
+									@endforeach
+								</td>
+								<td>
+									@php $qtyF = 0; @endphp
+									@foreach($orderDetail->gmt_color as $gmtColor)
+									@if($qtyF == 0)
+									@php $qtyF = 1; @endphp
+									{{ $gmtColor->item_color_measurement->qty }}
+									@else
+									<hr>
+									{{ $gmtColor->item_color_measurement->qty }}
+									@endif
+									@endforeach
+								</td>
+							</tr>
+							@endforeach
+						@else
+							<tr>
+								<td colspan="10"><b> No Data Found ! </b></td>
+							</tr>
+						@endif
+					</tbody>   
+				</table>
+			</div><!-- /.col -->
+
+			
+			<!-- /.form -->
+		</div><!-- /.page-content -->
+	</div>
+</div>
+
+
+
+@endsection

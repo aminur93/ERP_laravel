@@ -1,0 +1,205 @@
+.vertical-align-center{display: table-cell; vertical-align: middle !important;}
+.no_margin{margin: 0 !important;}
+.loader-cycle{width: 24%; margin: 0 auto;}
+/*commercial page*/
+.entry_search_section{width: 100%; padding: 10px;}
+.entry_result_section{width: 100%; padding: 10px 20px;}
+
+.panel-heading { padding: 5px 15px;}
+.page-headline-bar{position: relative;}
+.page-headline-bar a{bottom: 6px; text-align: right; float: right;}
+
+/* item details modal */
+.item_details_dialog { opacity: 0; -webkit-box-shadow: 0 2px 26px rgba(0, 0, 0, .3), 0 0 0 1px rgba(0, 0, 0, .1); box-shadow: 0 2px 26px rgba(0, 0, 0, .3), 0 0 0 1px rgba(0, 0, 0, .1); -moz-box-shadow: 0 2px 26px rgba(0, 0, 0, .3), 0 0 0 1px rgba(0, 0, 0, .1); margin: 6% auto 40px; background-color: #fff; -webkit-border-radius: 3px; border-radius: 3px; -moz-border-radius: 3px; position: relative; z-index: 900;}
+.fade-box-edit {display: none;}
+.fade-box-delete {display: none;}
+
+/*Dialog Header*/
+.inner_gray { padding: 10px 12px; background-color: #07415A; border-bottom: 1px solid #e5e5e5; -webkit-border-radius: 3px 3px 0 0; border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; color: #fff; font-weight: bold; line-height: 12px; font-size: 12px;}
+
+.inner_gray_text {float: left;}
+
+.inner_gray_close_button { float: right;}
+
+/*Dialog body*/
+.inner_body_content { padding: 12px; background-color: #fff; font-size: 14px;padding-bottom: 3px;}
+
+.inner_buttons { background: transparent; border-top: 1px solid #e9eaed; margin: 0 12px; padding: 6px 0; text-align: right;}
+
+.okay_modal_button { padding: 0 8px; background-color: #0c506d; border-color: #435a8b #3c5488 #334c83 !important; color: #fff; text-shadow: 0 -1px 0 rgba(0, 0, 0, .2); -webkit-background-clip: padding-box; background-clip: padding-box; border: 1px solid; -webkit-border-radius: 2px; border-radius: 2px; -moz-border-radius: 2px; -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05); box-shadow: 0 1px 1px rgba(0, 0, 0, .05); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .05); -webkit-box-sizing: content-box; box-sizing: content-box; -moz-box-sizing: content-box; -webkit-font-smoothing: antialiased; line-height: 20px; font-weight: bold; font-size: 12px; position: relative; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap;}
+
+.cancel_modal_button { padding: 0 8px; margin-left: 4px; border-color: #cdced0 #c5c6c8 #b6b7b9 !important; color: #4e5665; text-shadow: 0 1px 0 #fff; background: #f6f7f8; background-image: -webkit-linear-gradient(top, #ffffff, #f6f7f8); background-image: -moz-linear-gradient(top, #ffffff, #f6f7f8); background-image: -ms-linear-gradient(top, #ffffff, #f6f7f8); background-image: -o-linear-gradient(top, #ffffff, #f6f7f8); background-image: linear-gradient(to bottom, #ffffff, #f6f7f8); -webkit-background-clip: padding-box; background-clip: padding-box; border: 1px solid; -webkit-border-radius: 2px; border-radius: 2px; -moz-border-radius: 2px; -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05); box-shadow: 0 1px 1px rgba(0, 0, 0, .05); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .05); -webkit-box-sizing: content-box; box-sizing: content-box; -moz-box-sizing: content-box; -webkit-font-smoothing: antialiased; line-height: 22px; font-weight: bold; font-size: 12px; position: relative; text-align: center; vertical-align: middle; cursor: pointer; display: inline-block; text-decoration: none; white-space: nowrap;}
+
+/*Close Button*/
+.item_modal_close { width: 12px; height: 12px; padding: 0; background-color: transparent; border: 0 none; cursor: pointer; font-size: 0 !important; overflow: hidden; vertical-align: middle; background-image: url('../img/common-icon.png'); background-repeat: no-repeat; background-size: auto; background-position: -118px -213px; white-space: nowrap; display: inline-block; text-decoration: none; opacity: 1}
+
+
+/*Clear Fix*/
+.clearfix {zoom: 1;}
+
+.clearfix:after { clear: both; content: "."; display: block; font-size: 0; height: 0; line-height: 0; visibility: hidden;}
+
+/*Dialog overlay*/
+
+.overlay-modal { left: 0; min-height: 100%; right: 0; top: 0; background-color: rgba(0, 0, 0, 0.61); display: none; z-index: 12; position: fixed; overflow-y: scroll; height: 100%;}
+
+.item_details_head{width: 100%; overflow: hidden; color: #707070; font-weight: 400; background: repeat-x #F2F2F2; background-image: -webkit-linear-gradient(top,#F8F8F8 0,#ECECEC 100%); background-image: -o-linear-gradient(top,#F8F8F8 0,#ECECEC 100%); background-image: linear-gradient(to bottom,#F8F8F8 0,#ECECEC 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f8f8', endColorstr='#ffececec', GradientType=0);}
+.item_details_head ul{width: 100%; list-style: none; }
+.item_details_head ul li{float: left;}
+
+/* tooltip section */
+/* 
+  You want a simple and fancy tooltip?
+  Just copy all [data-tooltip] blocks:
+*/
+[data-tooltip] {
+  position: relative;
+  z-index: 0;
+}
+
+/* Positioning and visibility settings of the tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 50%;
+  bottom: calc(100% + 5px);
+  pointer-events: none;
+  transition: 0.1s;
+  will-change: transform;
+}
+
+/* The actual tooltip with a dynamic width */
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+  padding: 5px 10px;
+  min-width: 50px;
+  max-width: 300px;
+  width: max-content;
+  width: -moz-max-content;
+  border-radius: 6px;
+  font-size: 12px;
+  background-color: rgba(59, 72, 80, 0.9);
+  background-image: linear-gradient(30deg,
+    rgba(59, 72, 80, 0.44),
+    rgba(59, 68, 75, 0.44),
+    rgba(60, 82, 88, 0.44));
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: center;
+  white-space: pre-wrap;
+  transform: translate(-50%, -5px) scale(0.5);
+}
+
+/* Tooltip arrow */
+[data-tooltip]:after {
+  content: " ";
+  border-style: solid;
+  border-width: 5px 5px 0px 5px;
+  border-color: rgba(55, 64, 70, 0.9) transparent transparent transparent;
+  transition-duration: 0s; /* If the mouse leaves the element, 
+                              the transition effects for the 
+                              tooltip arrow are "turned off" */
+  transform-origin: top;   /* Orientation setting for the
+                              slide-down effect */
+  transform: translateX(-50%) scaleY(0);
+}
+
+/* Tooltip becomes visible at hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+/* Scales from 0.5 to 1 -> grow effect */
+[data-tooltip]:hover:before {
+  transition-delay: 0.1s;
+  transform: translate(-50%, -5px) scale(1);
+}
+/* Slide down effect only on mouseenter (NOT on mouseleave) */
+[data-tooltip]:hover:after {
+  transition-delay: 0.3s; /* Starting after the grow effect */
+  transition-duration: 0.1s;
+  transform: translateX(-50%) scaleY(1);
+}
+
+
+/* LEFT */
+/* Tooltip + arrow */
+[data-tooltip-location="left"]:before,
+[data-tooltip-location="left"]:after {
+  left: auto;
+  right: calc(100% + 5px);
+  bottom: 50%;
+}
+
+/* Tooltip */
+[data-tooltip-location="left"]:before {
+  transform: translate(-5px, 50%) scale(0.5);
+}
+[data-tooltip-location="left"]:hover:before {
+  transform: translate(-5px, 50%) scale(1);
+}
+
+/* Arrow */
+[data-tooltip-location="left"]:after {
+  border-width: 5px 0px 5px 5px;
+  border-color: transparent transparent transparent rgba(55, 64, 70, 0.9);
+  transform-origin: left;
+  transform: translateY(50%) scaleX(0);
+}
+[data-tooltip-location="left"]:hover:after {
+  transform: translateY(50%) scaleX(1);
+}
+
+
+
+/* RIGHT */
+[data-tooltip-location="right"]:before,
+[data-tooltip-location="right"]:after {
+  left: calc(100% + 5px);
+  bottom: 50%;
+}
+
+[data-tooltip-location="right"]:before {
+  transform: translate(5px, 50%) scale(0.5);
+}
+[data-tooltip-location="right"]:hover:before {
+  transform: translate(5px, 50%) scale(1);
+}
+
+[data-tooltip-location="right"]:after {
+  border-width: 5px 5px 5px 0px;
+  border-color: transparent rgba(55, 64, 70, 0.9) transparent transparent;
+  transform-origin: right;
+  transform: translateY(50%) scaleX(0);
+}
+[data-tooltip-location="right"]:hover:after {
+  transform: translateY(50%) scaleX(1);
+}
+
+/* BOTTOM */
+[data-tooltip-location="bottom"]:before,
+[data-tooltip-location="bottom"]:after {
+  top: calc(100% + 5px);
+  bottom: auto;
+}
+
+[data-tooltip-location="bottom"]:before {
+  transform: translate(-50%, 5px) scale(0.5);
+}
+[data-tooltip-location="bottom"]:hover:before {
+  transform: translate(-50%, 5px) scale(1);
+}
+
+[data-tooltip-location="bottom"]:after {
+  border-width: 0px 5px 5px 5px;
+  border-color: transparent transparent rgba(55, 64, 70, 0.9) transparent;
+  transform-origin: bottom;
+}
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {outline: -webkit-focus-ring-color auto 0px; 
+}
+.status-label{font-size: 11px;}
+
+
